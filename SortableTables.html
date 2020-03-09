@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Sortable Table</title>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
+
+  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+
+<style>
+
+*{
+  text-align: center;
+}
+</style>
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $("#table_id").dataTable();
+    });
+  </script>
+
+</head>
+
+<body>
+
+  <table id="table_id" class="display" >
+    <thead>
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Super Hero Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Tony</td>
+        <td>Stark</td>
+        <td>Iron Man</td>
+      </tr>
+      <tr>
+        <td>Steve</td>
+        <td>Rogers</td>
+        <td>Captain America</td>
+      </tr>
+      <tr>
+        <td>Natasha</td>
+        <td>Romanoff</td>
+        <td>Black Widow</td>
+      </tr>
+      <tr>
+        <td>Bruce</td>
+        <td>Banner</td>
+        <td>Hulk</td>
+      </tr>
+      <tr>
+        <td>Peter</td>
+        <td>Parker</td>
+        <td>Spider-Man</td>
+      </tr>
+    </tbody>
+  </table>
+
+</body>
+<footer>
+  <a href="index.html">Return to Main Page</a><br />
+</footer>
+
+</html>

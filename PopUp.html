@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>PopUp</title>
+  <style>
+    * {
+      magin: auto;
+      justify-content: center;
+      text-align: center;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <!-- Add mousewheel plugin (this is optional) -->
+  <script type="text/javascript" src="fancybox/lib/jquery.mousewheel.pack.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+  <!-- Add fancyBox -->
+  <link rel="stylesheet" href="fancybox/source/jquery.fancybox.css" type="text/css" media="screen" />
+  <script type="text/javascript" src="fancybox/source/jquery.fancybox.pack.js"></script>
+
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $(".fancybox").fancybox();
+
+      $(".fancybox")
+        .attr('rel', 'gallery')
+        .fancybox({
+          padding: 0,
+          margin: auto,
+          nextEffect: 'fade',
+          prevEffect: 'none',
+          autoCenter: false,
+          afterLoad: function() {
+            $.extend(this, {
+              aspectRatio: false,
+              type: 'html',
+              width: '50%',
+              height: '50%',
+              content: '<div class="fancybox-image" style="background-image:url(' + this.href + '); background-size: cover; background-position:100% 100%;background-repeat:no-repeat;height:100%;width:100%;" /></div>'
+            });
+          }
+        });
+    });
+  </script>
+
+</head>
+
+<body>
+  <br /><br /><br /><br /><br /><br />
+  <div>
+    <a class="fancybox" rel="group" href="img/spiderMan.png"><img style="max-width: 100px; max-height: auto" src="img/spiderMan.png" alt="" /></a>
+    <a class="fancybox" rel="group" href="img/ironMan.png"><img style="max-width: 100px; max-height: auto" src="img/ironMan.png" alt="" /></a>
+    <a class="fancybox" rel="group" href="img/captainAmerica.png"><img style="max-width: 100px; max-height: auto" src="img/captainAmerica.png" alt="" /></a>
+    <a class="fancybox" rel="group" href="img/hulk.png"><img style="max-width: 100px; max-height: auto" src="img/hulk.png" alt="" /></a>
+  </div>
+  <br /><br /><br /><br /><br /><br />
+</body>
+<footer>
+  <a href="index.html">Return to Main Page</a><br />
+</footer>
+
+</html>
